@@ -22,7 +22,11 @@
              <button onclick="handelSearch()"   class="btn btn-accent">search</button>
         </section>
         <section>
-            <div id="phone-container" class="   p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4  bg-slate-300" >
+            <!-- loading -->
+            <div class=" text-center my-44 hidden" id="loading-spinner">
+                <span class="loading loading-spinner loading-lg text-primary"></span>
+            </div>
+            <div id="phone-container" class="   p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 " >
          <!--       <div class="card w-96 bg-gray-500 shadow-xl">
                     <figure class="px-10 pt-10">
                       <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
@@ -37,6 +41,27 @@
                   </div>
                     -->
             </div>
+            <!--  shoe all button -->
+            <div id="show-all-buttons" class="hidden  text-center">
+                <button class="btn btn-primary"onclick=" handelShoeAll()"> Show All Buttons</button>
+            </div>
+  <!-- shoe model -->
+  <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="show_detail_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="phone-name" class=" text-2xl font-bold"></h3>
+    <div id="show-detail-container">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
         </section>
     </main>
     <footer></footer>
